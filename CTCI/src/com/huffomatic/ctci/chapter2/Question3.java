@@ -6,6 +6,19 @@ import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Scenario;
 import com.huffomatic.ctci.common.util.LinkedListUtil;
 
+/**
+ * Delete a middle element in a singly linked list.
+ * The element will not be the last element in the linked list.
+ * 
+ * Input:  Delete element with value 8 in (3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1)
+ * Output: (3 -> 5 -> 5 -> 10 -> 2 -> 1)
+ * 
+ * Time:  O(1)
+ * Space: O(1)
+ * 
+ * @author huffomatic
+ *
+ */
 public class Question3 {
 	public static void main(String[] argv) {
 		Node list = Scenario.scenario5_list1();
