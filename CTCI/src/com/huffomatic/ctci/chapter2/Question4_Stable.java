@@ -3,7 +3,8 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.scenario.Scenario;
+import com.huffomatic.ctci.common.test.Result;
+import com.huffomatic.ctci.common.test.Scenario;
 import com.huffomatic.ctci.common.util.LinkedListUtil;
 
 /**
@@ -24,22 +25,22 @@ import com.huffomatic.ctci.common.util.LinkedListUtil;
 public class Question4_Stable {
 	public static void main(String[] argv) {
 		Node result1 = partition(Scenario.scenario5_list1(), 5);
-		Assert.assertTrue(LinkedListUtil.compareLists(result1, Scenario.result8()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result8()));
 		
 		Node result2 = partition(Scenario.scenario5_list1(), 3);
-		Assert.assertTrue(LinkedListUtil.compareLists(result2, Scenario.result9()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result2, Result.result9()));
 		
 		Node result3 = partition(Scenario.scenario5_list1(), 8);
-		Assert.assertTrue(LinkedListUtil.compareLists(result3, Scenario.result10()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result3, Result.result10()));
 		
 		Node result4 = partition(Scenario.scenario5_list1(), 1);
-		Assert.assertTrue(LinkedListUtil.compareLists(result4, Scenario.result11()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result4, Result.result11()));
 		
 		Node result5 = partition(Scenario.scenario5_list1(), 11);
 		Assert.assertTrue(LinkedListUtil.compareLists(result5, Scenario.scenario5_list1()));
 		
 		Node result6 = partition(Scenario.scenario5_list1(), 7);
-		Assert.assertTrue(LinkedListUtil.compareLists(result6, Scenario.result10()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result6, Result.result10()));
 	}
 	
 	public static Node partition(Node head, int x) {

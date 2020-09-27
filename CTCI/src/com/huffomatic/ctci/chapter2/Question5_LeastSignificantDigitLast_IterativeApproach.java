@@ -3,7 +3,8 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.scenario.Scenario;
+import com.huffomatic.ctci.common.test.Result;
+import com.huffomatic.ctci.common.test.Scenario;
 import com.huffomatic.ctci.common.util.LinkedListUtil;
 
 /**
@@ -24,16 +25,16 @@ import com.huffomatic.ctci.common.util.LinkedListUtil;
 public class Question5_LeastSignificantDigitLast_IterativeApproach {
 	public static void main(String[] args) {
 		Node result1 = addLists(Scenario.scenario3_list1(), Scenario.scenario3_list2());
-		Assert.assertTrue(LinkedListUtil.compareLists(result1, Scenario.result3()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result3()));
 		
 		Node result2 = addLists(Scenario.scenario3_list2(), Scenario.scenario3_list1());
-		Assert.assertTrue(LinkedListUtil.compareLists(result2, Scenario.result3()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result2, Result.result3()));
 		
 		Node result3 = addLists(Scenario.scenario4_list1(), Scenario.scenario4_list2());
-		Assert.assertTrue(LinkedListUtil.compareLists(result3, Scenario.result4()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result3, Result.result4()));
 		
 		Node result4 = addLists(Scenario.scenario4_list2(), Scenario.scenario4_list1());
-		Assert.assertTrue(LinkedListUtil.compareLists(result4, Scenario.result4()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result4, Result.result4()));
 		
 		Node result5 = addLists(Scenario.scenario3_list1(), null);
 		Assert.assertTrue(LinkedListUtil.compareLists(result5, Scenario.scenario3_list1()));

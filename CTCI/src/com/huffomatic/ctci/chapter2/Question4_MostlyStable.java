@@ -3,7 +3,8 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.scenario.Scenario;
+import com.huffomatic.ctci.common.test.Result;
+import com.huffomatic.ctci.common.test.Scenario;
 import com.huffomatic.ctci.common.util.LinkedListUtil;
 
 /**
@@ -24,13 +25,13 @@ import com.huffomatic.ctci.common.util.LinkedListUtil;
 public class Question4_MostlyStable {
 	public static void main(String[] argv) {
 		Node result1 = partition(Scenario.scenario5_list1(), 5);
-		Assert.assertTrue(LinkedListUtil.compareLists(result1, Scenario.result5()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result5()));
 		
 		Node result2 = partition(Scenario.scenario5_list1(), 3);
-		Assert.assertTrue(LinkedListUtil.compareLists(result2, Scenario.result6()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result2, Result.result6()));
 		
 		Node result3 = partition(Scenario.scenario5_list1(), 8);
-		Assert.assertTrue(LinkedListUtil.compareLists(result3, Scenario.result7()));
+		Assert.assertTrue(LinkedListUtil.compareLists(result3, Result.result7()));
 		
 		Node result4 = partition(Scenario.scenario5_list1(), 1);
 		Assert.assertTrue(LinkedListUtil.compareLists(result4, Scenario.scenario5_list1()));
