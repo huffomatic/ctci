@@ -1,7 +1,10 @@
 package com.huffomatic.ctci.chapter2;
 
-import com.huffomatic.ctci.common.LinkedListUtil;
-import com.huffomatic.ctci.common.Node;
+import org.junit.Assert;
+
+import com.huffomatic.ctci.common.list.Node;
+import com.huffomatic.ctci.common.scenario.Scenario;
+import com.huffomatic.ctci.common.util.LinkedListUtil;
 
 /**
  * Sum lists where the 1's digit is head of list.
@@ -20,26 +23,26 @@ import com.huffomatic.ctci.common.Node;
  */
 public class Question5_LeastSignificantDigitFirst_IterativeApproach {
 	public static void main(String[] args) {
-		Node result1 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(scenario1_list1(), scenario1_list2());
-		LinkedListUtil.print(result1);
+		Node result1 = addLists(Scenario.scenario1_list1(), Scenario.scenario1_list2());
+		Assert.assertTrue(LinkedListUtil.compareLists(result1, Scenario.result1()));
 		
-		Node result2 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(scenario1_list2(), scenario1_list1());
-		LinkedListUtil.print(result2);
+		Node result2 = addLists(Scenario.scenario1_list2(), Scenario.scenario1_list1());
+		Assert.assertTrue(LinkedListUtil.compareLists(result2, Scenario.result1()));
 		
-		Node result3 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(scenario2_list1(), scenario2_list2());
-		LinkedListUtil.print(result3);
+		Node result3 = addLists(Scenario.scenario2_list1(), Scenario.scenario2_list2());
+		Assert.assertTrue(LinkedListUtil.compareLists(result3, Scenario.result2()));
 		
-		Node result4 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(scenario2_list2(), scenario2_list1());
-		LinkedListUtil.print(result4);
+		Node result4 = addLists(Scenario.scenario2_list2(), Scenario.scenario2_list1());
+		Assert.assertTrue(LinkedListUtil.compareLists(result4, Scenario.result2()));
 		
-		Node result5 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(scenario1_list1(), null);
-		LinkedListUtil.print(result5);
+		Node result5 = addLists(Scenario.scenario1_list1(), null);
+		Assert.assertTrue(LinkedListUtil.compareLists(result5, Scenario.scenario1_list1()));
 		
-		Node result6 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(null, scenario1_list1());
-		LinkedListUtil.print(result6);
+		Node result6 = addLists(null, Scenario.scenario1_list1());
+		Assert.assertTrue(LinkedListUtil.compareLists(result6, Scenario.scenario1_list1()));
 		
-		Node result7 = Question5_LeastSignificantDigitFirst_IterativeApproach.addLists(null, null);
-		LinkedListUtil.print(result7);
+		Node result7 = addLists(null, null);
+		Assert.assertNull(result7);
 	}
 	
 	public static Node addLists(Node list1, Node list2) {
@@ -84,59 +87,5 @@ public class Question5_LeastSignificantDigitFirst_IterativeApproach {
 		}
 		
 		return head;
-	}
-	
-	public static Node scenario1_list1() {
-		Node n1 = new Node(7);
-		Node n2 = new Node(1);
-		Node n3 = new Node(6);
-		
-		n1.next = n2;
-		n2.next = n3;
-		n3.next = null;
-		
-		return n1;
-	}
-	
-	public static Node scenario1_list2() {
-		Node n4 = new Node(5);
-		Node n5 = new Node(9);
-		Node n6 = new Node(2);
-		
-		n4.next = n5;
-		n5.next = n6;
-		n6.next = null;
-		
-		return n4;
-	}
-	
-	public static Node scenario2_list1() {
-		Node n1 = new Node(7);
-		Node n2 = new Node(1);
-		Node n3 = new Node(6);
-		Node n4 = new Node(9);
-		Node n5 = new Node(9);
-		Node n6 = new Node(9);
-		
-		n1.next = n2;
-		n2.next = n3;
-		n3.next = n4;
-		n4.next = n5;
-		n5.next = n6;
-		n6.next = null;
-		
-		return n1;
-	}
-	
-	public static Node scenario2_list2() {
-		Node n1 = new Node(5);
-		Node n2 = new Node(9);
-		Node n3 = new Node(9);
-		
-		n1.next = n2;
-		n2.next = n3;
-		n3.next = null;
-		
-		return n1;
 	}
 }

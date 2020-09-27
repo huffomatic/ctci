@@ -1,4 +1,4 @@
-package com.huffomatic.ctci.common;
+package com.huffomatic.ctci.common.list;
 
 public class Node {
 	public int data;
