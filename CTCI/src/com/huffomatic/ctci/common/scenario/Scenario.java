@@ -111,6 +111,26 @@ public class Scenario {
 		return n1;
 	}
 	
+	public static Node scenario5_list1() {
+		Node n1 = new Node(3);
+		Node n2 = new Node(5);
+		Node n3 = new Node(8);
+		Node n4 = new Node(5);
+		Node n5 = new Node(10);
+		Node n6 = new Node(2);
+		Node n7 = new Node(1);
+		
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		n5.next = n6;
+		n6.next = n7;
+		n7.next = null;
+		
+		return n1;
+	}
+	
 	public static Node result1() {
 		Node n1 = new Node(2);
 		Node n2 = new Node(1);
@@ -163,6 +183,26 @@ public class Scenario {
 		Node n5 = new Node(6);
 		Node n6 = new Node(1);
 		Node n7 = new Node(2);
+		
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		n5.next = n6;
+		n6.next = n7;
+		n7.next = null;
+		
+		return n1;
+	}
+	
+	public static Node result5() {
+		Node n1 = new Node(3);
+		Node n2 = new Node(1);
+		Node n3 = new Node(2);
+		Node n4 = new Node(10);
+		Node n5 = new Node(5);
+		Node n6 = new Node(5);
+		Node n7 = new Node(8);
 		
 		n1.next = n2;
 		n2.next = n3;
