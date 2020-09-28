@@ -130,4 +130,12 @@ public class Scenario {
 		
 		return n1;
 	}
+	
+	public static Node scenario6_list1() {
+		Node n1 = new Node(3);
+		
+		n1.next = null;
+		
+		return n1;
+	}
 }
