@@ -21,7 +21,7 @@ import com.huffomatic.ctci.common.util.LinkedListUtil;
  * @author huffomatic
  *
  */
-public class Question1_LinearSpace {
+public class Question1_LinearSpace_Solution2 {
 	public static void main(String[] argv) {
 		Node result1 = removeDuplicates(Scenario.scenario5_list1());
 		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result16()));
