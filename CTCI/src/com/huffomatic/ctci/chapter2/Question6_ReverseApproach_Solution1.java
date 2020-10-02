@@ -19,7 +19,7 @@ import com.huffomatic.ctci.common.util.LinkedListUtil;
  * Output: false
  * 
  * Time:  O(n) where n is the length of the list.
- * Space: O(1)
+ * Space: O(n) where n is the length of the list.
  * 
  * @author huffomatic
  *
@@ -31,6 +31,17 @@ public class Question6_ReverseApproach_Solution1 {
 		
 		Node list2 = Scenario.scenario7_list2();
 		Assert.assertTrue(isPalindrome(list2));
+		
+		Node list3 = Scenario.scenario7_list3();
+		Assert.assertFalse(isPalindrome(list3));
+		
+		Assert.assertTrue(isPalindrome(null));
+		
+		Node list4 = Scenario.scenario7_list4();
+		Assert.assertTrue(isPalindrome(list4));
+		
+		Node list5 = Scenario.scenario7_list5();
+		Assert.assertFalse(isPalindrome(list5));
 	}
 	
 	public static boolean isPalindrome(Node list) {

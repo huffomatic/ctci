@@ -188,4 +188,24 @@ public class Scenario {
 		
 		return n1;
 	}
+	
+	public static Node scenario7_list4() {
+		Node n1 = new Node(1);
+		Node n2 = new Node(1);
+		
+		n1.next = n2;
+		n2.next = null;
+		
+		return n1;
+	}
+	
+	public static Node scenario7_list5() {
+		Node n1 = new Node(0);
+		Node n2 = new Node(1);
+		
+		n1.next = n2;
+		n2.next = null;
+		
+		return n1;
+	}
 }
