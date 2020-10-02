@@ -50,7 +50,7 @@ public class Question5_LeastSignificantDigitFirst_IterativeApproach {
 		Node p1 = list1;
 		Node p2 = list2;
 		Node head = null;
-		Node result = null;
+		Node tail = null;
 		int carry = 0;
 		while (p1 != null || p2 != null) {
 			int sum = carry;
@@ -73,18 +73,18 @@ public class Question5_LeastSignificantDigitFirst_IterativeApproach {
 			current.next = null;
 			if (head == null) {
 				head = current;
-				result = current;
+				tail = current;
 			}
 			else {
-				result.next = current;
-				result = current;
+				tail.next = current;
+				tail = current;
 			}
 		}
 		
 		if (carry > 0) {
 			Node carryNode = new Node(carry);
 			carryNode.next = null;
-			result.next = carryNode;
+			tail.next = carryNode;
 		}
 		
 		return head;
