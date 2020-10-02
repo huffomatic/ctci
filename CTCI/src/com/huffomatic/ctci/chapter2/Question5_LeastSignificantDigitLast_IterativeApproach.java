@@ -95,9 +95,9 @@ public class Question5_LeastSignificantDigitLast_IterativeApproach {
 		
 		// Normalize the result list by starting at least significant digit and carry overflow and reversing result list.
 		// 1 -> 2 -> 3 -> null
-		// current = 1, head = 1, prev = null, next = 2 => current.next = null, prev = 1, current = 2, head = 1
-		// current = 2, head = 2, prev = 1, next = 3 => current.next = 1, prev = 2, current = 3, head = 2
-		// current = 3, head = 3, prev = 2, next = null => current.next = 2, prev = 3, current = null, head = 3
+		// current = 1, head = 1, prev = null => next = 2, current.next = null, prev = 1, current = 2, head = 1
+		// current = 2, head = 1, prev = 1 => next = 3, current.next = 1, prev = 2, current = 3, head = 2
+		// current = 3, head = 2, prev = 2 => next = null, current.next = 2, prev = 3, current = null, head = 3
 		Node prev = null;
 		Node current = head;
 		int carry = 0;
