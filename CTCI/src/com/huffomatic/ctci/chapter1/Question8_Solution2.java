@@ -5,7 +5,7 @@ import org.junit.Assert;
 import com.huffomatic.ctci.common.matrix.MatrixUtil;
 
 /**
- * Zero Matrx: If an element in a M x N matrix is zero, then set that row and column to 0.
+ * Zero Matrix: If an element in a M x N matrix is zero, then set that row and column to 0.
  * 
  * Input:  1  2  3  4
  *         5  0  7  8
