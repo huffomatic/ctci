@@ -2,6 +2,8 @@ package com.huffomatic.ctci.chapter1;
 
 import org.junit.Assert;
 
+import com.huffomatic.ctci.common.matrix.MatrixUtil;
+
 /**
  * Rotate a N x N matrix by 90 degrees
  * 
@@ -35,7 +37,7 @@ public class Question7 {
 		rotatedMatrix3by3[2][1] = 6;
 		rotatedMatrix3by3[2][2] = 3;
 		
-		Assert.assertTrue(compareMatrices(rotateMatrixBy90Degrees(matrix3by3), rotatedMatrix3by3));
+		Assert.assertTrue(MatrixUtil.compareMatrices(rotateMatrixBy90Degrees(matrix3by3), rotatedMatrix3by3));
 		
 		int[][] matrix4by4 = new int[4][4];
 		matrix4by4[0][0] = 1;
@@ -77,7 +79,7 @@ public class Question7 {
 		rotatedMatrix4by4[3][2] = 8;
 		rotatedMatrix4by4[3][3] = 4;
 		
-		Assert.assertTrue(compareMatrices(rotateMatrixBy90Degrees(matrix4by4), rotatedMatrix4by4));
+		Assert.assertTrue(MatrixUtil.compareMatrices(rotateMatrixBy90Degrees(matrix4by4), rotatedMatrix4by4));
 	}
 	
 	public static int[][] rotateMatrixBy90Degrees(int[][] matrix) {
@@ -103,27 +105,5 @@ public class Question7 {
 		}
 		
 		return matrix;
-	}
-	
-	private static boolean compareMatrices(int[][] matrix1, int[][] matrix2) {
-		if (matrix1.length != matrix2.length) {
-			return false;
-		}
-		else if (matrix1.length == 0) {
-			return false;
-		}
-		else if (matrix1[0].length != matrix2[0].length) {
-			return false;
-		}
-		
-		for (int i = 0; i < matrix1.length; i++) {
-			for (int j = 0; j < matrix1[0].length; j++) {
-				if (matrix1[i][j] != matrix2[i][j]) {
-					return false;
-				}
-			}
-		}
-		
-		return true;
 	}
 }
