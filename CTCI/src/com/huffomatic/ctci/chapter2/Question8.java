@@ -40,9 +40,9 @@ public class Question8 {
 		// Initializes the second list.
 		Node list2 = getSecondList(n1, n2, n3, n4, n5, n6, n7, n8);
 		Assert.assertNull(findLoop(list2));
-		Assert.assertTrue(findK(list2) == -1);
-		Assert.assertTrue(findLoopSize(list2) == -1);
-		Assert.assertTrue(findListSize(list2) == -1);
+		Assert.assertTrue(findK(list2) == 8);
+		Assert.assertTrue(findLoopSize(list2) == 0);
+		Assert.assertTrue(findListSize(list2) == 8);
 		
 		// Initializes the third list.
 		Node list3 = getThirdList(n1, n2, n3, n4, n5, n6, n7, n8);
@@ -68,17 +68,25 @@ public class Question8 {
 		// Initializes the sixth list.
 		Node list6 = null;
 		Assert.assertNull(findLoop(list6));
-		Assert.assertTrue(findK(list6) == -1);
-		Assert.assertTrue(findLoopSize(list6) == -1);
-		Assert.assertTrue(findListSize(list6) == -1);
+		Assert.assertTrue(findK(list6) == 0);
+		Assert.assertTrue(findLoopSize(list6) == 0);
+		Assert.assertTrue(findListSize(list6) == 0);
 		
 		// Initializes the seventh list.
 		Node list7 = new Node(1);
 		list7.next = null;
 		Assert.assertNull(findLoop(list7));
-		Assert.assertTrue(findK(list7) == -1);
-		Assert.assertTrue(findLoopSize(list7) == -1);
-		Assert.assertTrue(findListSize(list7) == -1);
+		Assert.assertTrue(findK(list7) == 1);
+		Assert.assertTrue(findLoopSize(list7) == 0);
+		Assert.assertTrue(findListSize(list7) == 1);
+		
+		// Initializes the eighth list.
+		Node list8 = new Node(1);
+		list8.next = list8;
+		Assert.assertTrue(findLoop(list8) == list8);
+		Assert.assertTrue(findK(list8) == 0);
+		Assert.assertTrue(findLoopSize(list8) == 1);
+		Assert.assertTrue(findListSize(list8) == 1);
 	}
 	
 	public static Node findLoop(Node list) {
@@ -115,6 +123,13 @@ public class Question8 {
 	}
 	
 	public static int findK(Node list) {
+		if (list == null) {
+			return 0;
+		}
+		else if (list.next == null) {
+			return 1;
+		}
+		
 		// Initializes two pointers and set them to the start of the list.
 		Node slow = list;
 		Node fast = list;
@@ -129,9 +144,15 @@ public class Question8 {
 			}
 		}
 		
-		// If the fast pointer reached the end of the list without finding an overlapping node, then return -1.
+		// If the fast pointer reached the end of the list without finding an overlapping node, then return the length of the list.
 		if (fast == null || fast.next == null) {
-			return -1;
+			int k = 0;
+			slow = list;
+			while (slow != null) {
+				k++;
+				slow = slow.next;
+			}
+			return k;
 		}
 		
 		// Move the fast pointer back to the start of the list.
@@ -168,7 +189,7 @@ public class Question8 {
 		
 		// If the fast pointer reached the end of the list without finding an overlapping node, then return -1.
 		if (fast == null || fast.next == null) {
-			return -1;
+			return 0;
 		}
 		
 		// Move the fast pointer back to the start of the list.
@@ -195,12 +216,7 @@ public class Question8 {
 		int k = findK(list);
 		int loopSize = findLoopSize(list);
 		
-		if (k != -1 && loopSize != -1) {
-			return (k + loopSize);
-		}
-		else {
-			return -1;
-		}
+		return (k + loopSize);
 	}
 	
 	private static Node getFirstList(Node n1, Node n2, Node n3, Node n4, Node n5, Node n6, Node n7, Node n8) {
