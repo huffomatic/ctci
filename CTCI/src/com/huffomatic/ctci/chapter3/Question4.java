@@ -9,7 +9,7 @@ import com.huffomatic.ctci.common.stack.EmptyStackException;
 /**
  * Queue via Stacks: Implement a queue using two stacks.
  * 
- * Time:  O(1)
+ * Time:  O(n) where n is the number of items in the stack.
  * Space: O(1)
  * 
  * @author huffomatic
