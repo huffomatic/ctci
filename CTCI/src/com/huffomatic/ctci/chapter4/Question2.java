@@ -19,19 +19,6 @@ public class Question2 {
 		//           4
 		//     2           6
 		//  1     3     5     7
-		
-		Node node1 = new Node("1");
-		Node node2 = new Node("2");
-		Node node3 = new Node("3");
-		Node node4 = new Node("4");
-		Node node5 = new Node("5");
-		Node node6 = new Node("6");
-		Node node7 = new Node("7");
-		
-		node4.adjacent = new Node[] {node2, node6};
-		node2.adjacent = new Node[] {node1, node3};
-		node6.adjacent = new Node[] {node5, node7};
-		
 		int[] sortedArray1 = new int[] {1, 2, 3, 4, 5, 6, 7};
 		
 		Node root1 = createMinimalBST(sortedArray1);
@@ -49,16 +36,9 @@ public class Question2 {
 		//     2           6
 		//  1     3     5     7  
 	    //                       8
-		Node node8 = new Node("8");
-		
 		int[] sortedArray2 = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
 		
 		Node root2 = createMinimalBST(sortedArray2);
-		
-		node4.adjacent = new Node[] {node2, node6};
-		node2.adjacent = new Node[] {node1, node3};
-		node6.adjacent = new Node[] {node5, node8};
-		node8.adjacent = new Node[] {node7};
 		
 		Assert.assertTrue(root2.name.equals("4"));
 		Assert.assertTrue(root2.adjacent[0].name.equals("2"));
