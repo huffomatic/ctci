@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import org.junit.Assert;
 
-import com.huffomatic.ctci.common.graph.Node;
+import com.huffomatic.ctci.common.tree.Node;
 
 /**
  * List of Depths: Create a linked list of all the nodes at each depth in a binary tree.
@@ -30,9 +30,12 @@ public class Question3_DepthFirstApproach {
 		Node node6 = new Node("6");
 		Node node7 = new Node("7");
 		
-		node4.adjacent = new Node[] {node2, node6};
-		node2.adjacent = new Node[] {node1, node3};
-		node6.adjacent = new Node[] {node5, node7};
+		node4.left = node2;
+		node4.right = node6;
+		node2.left = node1;
+		node2.right = node3;
+		node6.left = node5;
+		node6.right = node7;
 		
 		LinkedList<Node> expectedDepthList1_1 = new LinkedList<Node>();
 		expectedDepthList1_1.add(node4);
@@ -63,10 +66,14 @@ public class Question3_DepthFirstApproach {
 	    //                       8
 		Node node8 = new Node("8");
 		
-		node4.adjacent = new Node[] {node2, node6};
-		node2.adjacent = new Node[] {node1, node3};
-		node6.adjacent = new Node[] {node5, node7};
-		node7.adjacent = new Node[] {node8};
+		node4.left = node2;
+		node4.right = node6;
+		node2.left = node1;
+		node2.right = node3;
+		node6.left = node5;
+		node6.right = node7;
+		node7.left = null;
+		node7.right = node8;
 
 		LinkedList<Node> expectedDepthList2_1 = new LinkedList<Node>();
 		expectedDepthList2_1.add(node4);
@@ -116,8 +123,8 @@ public class Question3_DepthFirstApproach {
 		LinkedList<Node> currentDepthList = depthList.get(level);
 		currentDepthList.add(node);
 		
-		createDepthList((node.adjacent != null && node.adjacent.length >= 1) ? node.adjacent[0] : null, depthList, level + 1);
-		createDepthList((node.adjacent != null && node.adjacent.length == 2) ? node.adjacent[1] : null, depthList, level + 1);
+		createDepthList(node.left, depthList, level + 1);
+		createDepthList(node.right, depthList, level + 1);
 	}
 	
 	private static boolean compareListOfLists(LinkedList<LinkedList<Node>> list1, LinkedList<LinkedList<Node>> list2) {
