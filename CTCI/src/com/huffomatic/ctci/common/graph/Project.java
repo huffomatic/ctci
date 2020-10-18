@@ -6,6 +6,7 @@ public class Project {
 	public String name;
 	public ArrayList<Project> children = new ArrayList<Project>();
 	public int dependencies = 0;
+	public State state = State.Unvisited;
 	
 	public Project(String name) {
 		this.name = name;

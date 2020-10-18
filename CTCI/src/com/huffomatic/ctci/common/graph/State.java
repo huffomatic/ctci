@@ -1,5 +1,5 @@
 package com.huffomatic.ctci.common.graph;
 
 public enum State {
-	Unvisited, Visited;
+	Unvisited, Visited, Visiting;
 }
