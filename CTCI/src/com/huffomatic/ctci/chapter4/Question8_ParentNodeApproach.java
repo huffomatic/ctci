@@ -7,13 +7,13 @@ import com.huffomatic.ctci.common.tree.Node;
 /**
  * First Common Ancestor: Find the first common ancestor of two nodes in a binary tree.
  * 
- * Time:  O()
- * Space: O()
+ * Time:  O(d) where d is the depth of the deepest node.
+ * Space: O(d) where d is the depth of the deepest node.
  * 
  * @author huffomatic
  *
  */
-public class Question8 {
+public class Question8_ParentNodeApproach {
 	public static void main(String[] args) throws Exception {
 		// []
 		Assert.assertTrue(getFirstCommonAncestor(null, null) == null);
