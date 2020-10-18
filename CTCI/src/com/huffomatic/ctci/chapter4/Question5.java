@@ -134,7 +134,7 @@ public class Question5 {
 		node4.left = node3;
 		node4.right = null;
 		node3.left = node2;
-		node8.right = null;
+		node3.right = null;
 		node2.left = node1;
 		node2.right = null;
 		node1.left = null;
@@ -161,7 +161,7 @@ public class Question5 {
 		node4.left = node3;
 		node4.right = null;
 		node3.left = node2;
-		node8.right = null;
+		node3.right = null;
 		node2.left = node1;
 		node2.right = null;
 		node1.left = null;

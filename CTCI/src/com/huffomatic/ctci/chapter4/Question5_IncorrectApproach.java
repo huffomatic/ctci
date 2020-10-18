@@ -109,7 +109,7 @@ public class Question5_IncorrectApproach {
 		node4.left = node3;
 		node4.right = null;
 		node3.left = node2;
-		node8.right = null;
+		node3.right = null;
 		node2.left = node1;
 		node2.right = null;
 		node6.left = node7;
