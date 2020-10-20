@@ -343,46 +343,42 @@ public class Question8_NoParentNodeOptimizedApproach {
 	}
 	
 	private static Node getFirstCommonAncestorHelper(Node current, Node first, Node second) {
-		// 1. Return first if current's subtree contains first but not second.
-		// 2. Return second if current's subtree contains second but not first.
-		// 3. Return null if current's subtree does not contain either first nor second.
-		// 4. Return current if one of current's subtrees contains first and the other contains second.
-		
-		// If current is null, current equals first node, or current equals second node, then return current.
-		// These checks are required in case first and second are not at the same level.
-		if ((current == null) || (current == first) || (current == second)) {
+		// If current is null or current is first or current is second, then return current.
+		if (current == null || current == first || current == second) {
 			return current;
 		}
 		
-		// Finds the first common ancestor on the left child.
-		Node leftNode = getFirstCommonAncestorHelper(current.left, first, second);
+		// Searches the left subtree for first and second.
+		Node left = getFirstCommonAncestorHelper(current.left, first, second);
 		
-		// Bubble up the first common ancestor if it was already found.
-		if (leftNode != null && leftNode != first && leftNode != second) {
-			return leftNode;
+		// If left was found, then propagate it up the call stack.
+		if (left != null && left != current && left != first && left != second) {
+			return left;
 		}
 		
-		// Finds the first common ancestor on the right child.
-		Node rightNode = getFirstCommonAncestorHelper(current.right, first, second);
+		// Searches the right subtree for first and second.
+		Node right = getFirstCommonAncestorHelper(current.right, first, second);
 		
-		// Bubble up the first common ancestor if it was already found.
-		if (rightNode != null && rightNode != first && rightNode != second) {
-			return rightNode;
+		// If right was found, then propagate it up the call stack.
+		if (right != null && right != current && right != first && right != second) {
+			return right;
 		}
 		
-		// If the left node and right node were found, this this means the current node
-		// is the first common ancestor.
-		if (leftNode != null && rightNode != null) {
+		// 1. Return current if one of current's subtrees contains first and the other subtree contains second.
+		// 2. Return left if current's left subtree contains first or second and the other subtree does not find anything.
+		// 3. Return right if current's right subtree contains first or second and the other subtree does not find anything.
+		// 4. Return null if neither one of current's subtree contains first or second.
+		if (left != null && right != null) {
 			return current;
 		}
-		else if (current == first || current == second) {
-			return current;
+		else if (left != null && right == null) {
+			return left;
 		}
-		else if (leftNode != null) {
-			return leftNode;
+		else if (left == null && right != null) {
+			return right;
 		}
 		else {
-			return rightNode;
+			return null;
 		}
 	}
 	

@@ -339,10 +339,10 @@ public class Question8_NoParentNodeUnoptimizedApproach {
 		
 		// Find the first common ancestor knowing now both first and second nodes exist
 		// in the binary tree.
-		return getFirstCommonAncesorHelper(root, first, second);
+		return getFirstCommonAncestorHelper(root, first, second);
 	}
 	
-	private static Node getFirstCommonAncesorHelper(Node current, Node first, Node second) {
+	private static Node getFirstCommonAncestorHelper(Node current, Node first, Node second) {
 		// If current is null, current equals first node, or current equals second node, then return current.
 		// These checks are required in case first and second are not at the same level.
 		if ((current == null) || (current == first) || (current == second)) {
@@ -363,7 +363,7 @@ public class Question8_NoParentNodeUnoptimizedApproach {
 		Node child = leftCoversFirst ? current.left : current.right;
 		
 		// Returns the first common ancestor on the other child.
-		return getFirstCommonAncesorHelper(child, first, second);
+		return getFirstCommonAncestorHelper(child, first, second);
 	}
 	
 	private static boolean covers(Node current, Node node) {
