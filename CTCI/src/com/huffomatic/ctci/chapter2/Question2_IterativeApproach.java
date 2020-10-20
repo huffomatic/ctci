@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Scenario;
-import com.huffomatic.ctci.common.util.LinkedListUtil;
+import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
  * Print the kth to last element.  The 1st to last element is the last element.

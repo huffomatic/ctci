@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Scenario;
-import com.huffomatic.ctci.common.util.LinkedListUtil;
+import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
  * Delete a middle element in a singly linked list.

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Result;
 import com.huffomatic.ctci.common.test.Scenario;
-import com.huffomatic.ctci.common.util.LinkedListUtil;
+import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
  * Partition a linked list around a value x.

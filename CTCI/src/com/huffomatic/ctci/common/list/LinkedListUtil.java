@@ -1,4 +1,4 @@
-package com.huffomatic.ctci.common.util;
+package com.huffomatic.ctci.common.list;
 
 import com.huffomatic.ctci.common.list.Node;
 
