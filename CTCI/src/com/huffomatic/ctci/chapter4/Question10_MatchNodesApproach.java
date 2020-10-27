@@ -66,7 +66,7 @@ public class Question10_MatchNodesApproach {
 		// If both nodes are null, then return true as null nodes are equal.
 		// If one of the nodes is null, then return false as they aren't equal.
 		// If the node's match, then traversal both the left and right subtrees for matches.
-		// Else, return false.
+		// Else, return false as nodes do not match.
 		if (node1 == null && node2 == null) {
 			return true;
 		}
