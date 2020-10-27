@@ -3,7 +3,7 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
@@ -20,7 +20,7 @@ import com.huffomatic.ctci.common.list.LinkedListUtil;
  */
 public class Question2_IterativeApproach {
 	public static void main(String[] argv) {
-		Node list = Scenario.scenario5_list1();
+		Node list = LinkedListScenario.scenario5_list1();
 
 		Node result1 = printKthToLast(list, 1);
 		Assert.assertTrue(result1 == list.next.next.next.next.next.next);

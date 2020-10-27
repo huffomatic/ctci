@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Result;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
@@ -24,23 +24,23 @@ import com.huffomatic.ctci.common.list.LinkedListUtil;
  */
 public class Question5_LeastSignificantDigitLast_IterativeApproach {
 	public static void main(String[] args) {
-		Node result1 = addLists(Scenario.scenario3_list1(), Scenario.scenario3_list2());
+		Node result1 = addLists(LinkedListScenario.scenario3_list1(), LinkedListScenario.scenario3_list2());
 		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result3()));
 		
-		Node result2 = addLists(Scenario.scenario3_list2(), Scenario.scenario3_list1());
+		Node result2 = addLists(LinkedListScenario.scenario3_list2(), LinkedListScenario.scenario3_list1());
 		Assert.assertTrue(LinkedListUtil.compareLists(result2, Result.result3()));
 		
-		Node result3 = addLists(Scenario.scenario4_list1(), Scenario.scenario4_list2());
+		Node result3 = addLists(LinkedListScenario.scenario4_list1(), LinkedListScenario.scenario4_list2());
 		Assert.assertTrue(LinkedListUtil.compareLists(result3, Result.result4()));
 		
-		Node result4 = addLists(Scenario.scenario4_list2(), Scenario.scenario4_list1());
+		Node result4 = addLists(LinkedListScenario.scenario4_list2(), LinkedListScenario.scenario4_list1());
 		Assert.assertTrue(LinkedListUtil.compareLists(result4, Result.result4()));
 		
-		Node result5 = addLists(Scenario.scenario3_list1(), null);
-		Assert.assertTrue(LinkedListUtil.compareLists(result5, Scenario.scenario3_list1()));
+		Node result5 = addLists(LinkedListScenario.scenario3_list1(), null);
+		Assert.assertTrue(LinkedListUtil.compareLists(result5, LinkedListScenario.scenario3_list1()));
 		
-		Node result6 = addLists(null, Scenario.scenario3_list1());
-		Assert.assertTrue(LinkedListUtil.compareLists(result6, Scenario.scenario3_list1()));
+		Node result6 = addLists(null, LinkedListScenario.scenario3_list1());
+		Assert.assertTrue(LinkedListUtil.compareLists(result6, LinkedListScenario.scenario3_list1()));
 		
 		Node result7 = addLists(null, null);
 		Assert.assertNull(result7);

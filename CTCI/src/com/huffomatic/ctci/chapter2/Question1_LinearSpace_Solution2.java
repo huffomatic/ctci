@@ -6,7 +6,7 @@ import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
 import com.huffomatic.ctci.common.test.Result;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
@@ -23,11 +23,11 @@ import com.huffomatic.ctci.common.list.LinkedListUtil;
  */
 public class Question1_LinearSpace_Solution2 {
 	public static void main(String[] argv) {
-		Node result1 = removeDuplicates(Scenario.scenario5_list1());
+		Node result1 = removeDuplicates(LinkedListScenario.scenario5_list1());
 		Assert.assertTrue(LinkedListUtil.compareLists(result1, Result.result16()));
 		
-		Node result2 = removeDuplicates(Scenario.scenario6_list1());
-		Assert.assertTrue(LinkedListUtil.compareLists(result2, Scenario.scenario6_list1()));
+		Node result2 = removeDuplicates(LinkedListScenario.scenario6_list1());
+		Assert.assertTrue(LinkedListUtil.compareLists(result2, LinkedListScenario.scenario6_list1()));
 		
 		Node result3 = removeDuplicates(null);
 		Assert.assertNull(result3);

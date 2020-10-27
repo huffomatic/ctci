@@ -2,7 +2,7 @@ package com.huffomatic.ctci.common.test;
 
 import com.huffomatic.ctci.common.list.Node;
 
-public class Scenario {
+public class LinkedListScenario {
 	public static Node scenario1_list1() {
 		Node n1 = new Node(7);
 		Node n2 = new Node(1);

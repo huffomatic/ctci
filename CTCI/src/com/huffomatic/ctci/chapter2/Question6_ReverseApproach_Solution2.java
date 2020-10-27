@@ -3,7 +3,7 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
@@ -26,21 +26,21 @@ import com.huffomatic.ctci.common.list.LinkedListUtil;
  */
 public class Question6_ReverseApproach_Solution2 {
 	public static void main(String[] args) {
-		Node list1 = Scenario.scenario7_list1();
+		Node list1 = LinkedListScenario.scenario7_list1();
 		Assert.assertTrue(isPalindrome(list1));
 		
-		Node list2 = Scenario.scenario7_list2();
+		Node list2 = LinkedListScenario.scenario7_list2();
 		Assert.assertTrue(isPalindrome(list2));
 		
-		Node list3 = Scenario.scenario7_list3();
+		Node list3 = LinkedListScenario.scenario7_list3();
 		Assert.assertFalse(isPalindrome(list3));
 		
 		Assert.assertTrue(isPalindrome(null));
 		
-		Node list4 = Scenario.scenario7_list4();
+		Node list4 = LinkedListScenario.scenario7_list4();
 		Assert.assertTrue(isPalindrome(list4));
 		
-		Node list5 = Scenario.scenario7_list5();
+		Node list5 = LinkedListScenario.scenario7_list5();
 		Assert.assertFalse(isPalindrome(list5));
 	}
 	

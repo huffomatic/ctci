@@ -3,7 +3,7 @@ package com.huffomatic.ctci.chapter2;
 import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 import com.huffomatic.ctci.common.list.LinkedListUtil;
 
 /**
@@ -21,7 +21,7 @@ import com.huffomatic.ctci.common.list.LinkedListUtil;
  */
 public class Question3 {
 	public static void main(String[] argv) {
-		Node list = Scenario.scenario5_list1();
+		Node list = LinkedListScenario.scenario5_list1();
 
 		boolean result1 = deleteMiddleNode(null);
 		Assert.assertFalse(result1);

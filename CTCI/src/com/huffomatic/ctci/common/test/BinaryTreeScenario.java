@@ -2,7 +2,7 @@ package com.huffomatic.ctci.common.test;
 
 import com.huffomatic.ctci.common.tree.Node;
 
-public class TreeScenario {
+public class BinaryTreeScenario {
 	public static Node getScenario1() {
 		// [1, 2, 3]
 		//     2

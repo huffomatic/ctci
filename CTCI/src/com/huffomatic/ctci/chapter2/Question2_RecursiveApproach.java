@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 import com.huffomatic.ctci.common.list.Index;
 import com.huffomatic.ctci.common.list.Node;
-import com.huffomatic.ctci.common.test.Scenario;
+import com.huffomatic.ctci.common.test.LinkedListScenario;
 
 /**
  * Print the kth to last element.  The 1st last element is the last element.
@@ -20,7 +20,7 @@ import com.huffomatic.ctci.common.test.Scenario;
  */
 public class Question2_RecursiveApproach {
 	public static void main(String[] argv) {
-		Node list = Scenario.scenario5_list1();
+		Node list = LinkedListScenario.scenario5_list1();
 
 		Node result1 = printKthToLast(list, 1);
 		Assert.assertTrue(result1 == list.next.next.next.next.next.next);

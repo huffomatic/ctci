@@ -2,7 +2,7 @@ package com.huffomatic.ctci.chapter4;
 
 import org.junit.Assert;
 
-import com.huffomatic.ctci.common.test.TreeScenario;
+import com.huffomatic.ctci.common.test.BinaryTreeScenario;
 import com.huffomatic.ctci.common.tree.Node;
 
 /**
@@ -18,21 +18,21 @@ public class Question10_PatternMatchingApproach {
 	public static void main(String[] args) throws Exception {
 Assert.assertTrue(isSubtree(null, null));
 		
-		Assert.assertTrue(isSubtree(TreeScenario.getScenario1(), null));
+		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario1(), null));
 		
-		Assert.assertFalse(isSubtree(null, TreeScenario.getScenario1()));
+		Assert.assertFalse(isSubtree(null, BinaryTreeScenario.getScenario1()));
 		
-		Assert.assertTrue(isSubtree(TreeScenario.getScenario1(), TreeScenario.getScenario1()));
+		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario1(), BinaryTreeScenario.getScenario1()));
 		
-		Assert.assertTrue(isSubtree(TreeScenario.getScenario2(), TreeScenario.getScenario2()));
+		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario2(), BinaryTreeScenario.getScenario2()));
 		
-		Assert.assertTrue(isSubtree(TreeScenario.getScenario2(), TreeScenario.getScenario6()));
+		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario2(), BinaryTreeScenario.getScenario6()));
 		
-		Assert.assertTrue(isSubtree(TreeScenario.getScenario3(), TreeScenario.getScenario4()));
+		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario3(), BinaryTreeScenario.getScenario4()));
 		
-		Assert.assertFalse(isSubtree(TreeScenario.getScenario3(), TreeScenario.getScenario5()));
+		Assert.assertFalse(isSubtree(BinaryTreeScenario.getScenario3(), BinaryTreeScenario.getScenario5()));
 		
-		Assert.assertFalse(isSubtree(TreeScenario.getScenario4(), TreeScenario.getScenario5()));
+		Assert.assertFalse(isSubtree(BinaryTreeScenario.getScenario4(), BinaryTreeScenario.getScenario5()));
 	}
 	
 	private static boolean isSubtree(Node root1, Node root2) {
