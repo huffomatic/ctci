@@ -16,7 +16,7 @@ import com.huffomatic.ctci.common.tree.Node;
  */
 public class Question10_PatternMatchingApproach {
 	public static void main(String[] args) throws Exception {
-Assert.assertTrue(isSubtree(null, null));
+		Assert.assertTrue(isSubtree(null, null));
 		
 		Assert.assertTrue(isSubtree(BinaryTreeScenario.getScenario1(), null));
 		
