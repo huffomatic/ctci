@@ -17,11 +17,6 @@ import com.huffomatic.ctci.common.tree.Node;
  *
  */
 public class Question5_IncorrectApproach {
-	class Result {
-		Integer min = null;
-		Integer max = null;
-	}
-	
 	public static void main(String[] args) throws Exception {
 		// []
 		Assert.assertTrue(isBinarySearchTree(null));
@@ -174,7 +169,7 @@ public class Question5_IncorrectApproach {
 		boolean leftResult = isBinarySearchTree(node.left);
 		boolean rightResult = isBinarySearchTree(node.right);
 		
-		// If neither the left or right nodes are binary search trees, then the rest of the tree
+		// If either the left or right nodes are not binary search trees, then the rest of the tree
 		// is not a binary search tree so return false.
 		if (!leftResult || !rightResult) {
 			return false;

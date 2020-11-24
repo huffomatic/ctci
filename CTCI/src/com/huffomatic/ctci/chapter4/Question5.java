@@ -280,7 +280,7 @@ public class Question5 {
 		boolean leftResult = isBinarySearchTree(node.left, min, current);
 		boolean rightResult = isBinarySearchTree(node.right, current, max);
 		
-		// If neither the left or right nodes are binary search trees, then the rest of the tree
+		// If either the left or right nodes are not binary search trees, then the rest of the tree
 		// is not a binary search tree so return false.
 		if (!leftResult || !rightResult) {
 			return false;
@@ -288,7 +288,7 @@ public class Question5 {
 		
 		// Since the left and right nodes are binary search trees, then check to see if the current
 		// value makes the tree a binary search tree.
-		// min < current <= max
+		// min < current <= max is the rule we are enforcing.
 		if (min != null && min >= current) {
 			return false;
 		}
